@@ -1,0 +1,9 @@
+title: 我的博客
+description: 一个由 Jekyll 驱动的 GitHub Pages 博客
+author: yourname
+email: your@email.com
+baseurl: "" # 个人主页为空，项目页改为 /repo-name
+url: "https://yourname.github.io"
+theme: minima
+plugins:
+  - jekyll-feed

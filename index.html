@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My GitHub Page</title>
+  <title>我的博客</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="欢迎来到我的博客，这里记录我的项目与学习。" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
 
   <!-- 封面 -->
-<div id="cover">
-  <canvas id="stars-canvas"></canvas>
-  <div class="cover-inner">
-    <h1 class="glow-text">欢迎来到我的博客</h1>
-    <button id="enter-btn" class="glass-button">✦ 启 ✦</button>
+  <div id="cover">
+    <canvas id="stars-canvas"></canvas>
+    <div class="cover-inner">
+      <h1 class="glow-text">欢迎来到我的博客</h1>
+      <button id="enter-btn" class="glass-button">✦ 启 ✦</button>
+    </div>
   </div>
-</div>
-
 
   <!-- 主体内容 -->
   <div id="content">
@@ -33,7 +34,7 @@
       <section>
         <h2>Hello!</h2>
         <p>This site is built with plain HTML — no Jekyll needed.</p>
-        <img src="images/sample.jpg" alt="Sample Image" style="max-width: 300px;" />
+        <img src="images/头像.jpg" alt="头像" style="max-width: 300px;" />
       </section>
     </main>
 
@@ -42,8 +43,8 @@
     </footer>
   </div>
 
-  <!-- 引用外部 JS -->
-  <script src="script.js"></script>
+  <!-- 脚本加载 -->
+  <script src="script.js" defer></script>
 
 </body>
 </html>

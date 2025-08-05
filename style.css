@@ -9,18 +9,96 @@ body {
   color: #333;
 }
 
-header {
+/* 导航横向布局 */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
+  padding: 1em 2em;
 }
 
-nav a {
-  margin: 0 1em;
+/* 左侧标题和菜单项布局 */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.nav-left h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.nav-left h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+
+.nav-left nav a {
+  margin: 0 0.5em;
   color: white;
   text-decoration: none;
 }
+
+/* 鼠标悬停效果 */
+.nav-left nav a:hover {
+  text-decoration: underline;
+}
+
+/* 右侧头像布局 */
+.nav-right .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* 头像容器样式 */
+.nav-right {
+  position: relative;
+}
+
+/* 博主信息卡片（默认隐藏） */
+.profile-card {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 220px;
+  background-color: #fff;
+  color: #333;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 可选：关闭按钮样式、文字样式调整 */
+.profile-card p {
+  margin: 0.4em 0;
+  font-size: 0.95em;
+}
+
 
 main {
   padding: 2em;
@@ -59,7 +137,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  transition: opacity 1.5s ease;
+  transition: opacity 1s ease;
 }
 
 /* 封面内容 */
@@ -67,7 +145,7 @@ footer {
   position: relative;
   z-index: 1;
   text-align: center;
-  animation: fadeInUp 1.5s ease;
+  animation: fadeInUp 1s ease;
 }
 
 @keyframes fadeInUp {
@@ -115,7 +193,7 @@ footer {
 =================== */
 #content {
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 1s ease;
 }
 
 #content.visible {

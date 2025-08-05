@@ -92,3 +92,19 @@ window.addEventListener('resize', () => {
 });
 
 updateMeteors();
+
+const avatarBtn = document.getElementById('avatar-btn');
+const profileCard = document.getElementById('profile-card');
+
+avatarBtn.addEventListener('click', function (e) {
+  e.stopPropagation();
+  profileCard.style.display =
+    profileCard.style.display === 'block' ? 'none' : 'block';
+});
+
+// 点击其他区域隐藏卡片
+document.addEventListener('click', function () {
+  profileCard.style.display = 'none';
+});
+
+
